@@ -12,8 +12,8 @@ const DB_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/collab-notes';
 
 mongoose.connect(DB_URL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
+    useUnifiedTopology: true
+    // Removed useCreateIndex as it is deprecated
 });
 
 app.get('/', (req, res) => {
